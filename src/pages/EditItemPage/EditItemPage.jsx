@@ -13,7 +13,6 @@ export const EditItemPage = () => {
     const fetchItem = async () => {
       try {
         const response = await getItemById(id);
-        console.log("Returned item: ", response);
         setItem(response.data);
       } catch (error) {
         console.error("Failed to load item:", error);
@@ -25,7 +24,6 @@ export const EditItemPage = () => {
 
   const handleSubmit = async (data) => {
     try {
-      console.log("Returned data: ", data);
       await updateItem(id, data);
       navigate("/");
     } catch (error) {

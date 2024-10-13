@@ -8,7 +8,6 @@ export const CreateItemPage = () => {
 
   const handleSubmit = async (data) => {
     try {
-      console.log("Returned data: ", data);
       await createItem(data);
       navigate("/");
     } catch (error) {

@@ -14,7 +14,6 @@ export const ItemRow = ({ item }) => {
       <td className={styles.td}>{item.service || "N/A"}</td>
       <td className={styles.td}>{item.serviceComment || "N/A"}</td>
       <td className={styles.td}>
-        {console.log("Item output from ItemRow: ", item)}
         {item.microtasks.length > 0 ? (
           <ul>
             {item.microtasks.map((task, index) => (

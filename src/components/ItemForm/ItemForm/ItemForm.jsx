@@ -46,7 +46,6 @@ export const ItemForm = ({ defaultValues = {}, onSubmit }) => {
     } else {
       payload = extractFilledFields(data);
     }
-    console.log("Payload: ", payload);
     onSubmit(payload);
   };
 

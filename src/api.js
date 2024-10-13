@@ -17,7 +17,6 @@ const handleApiRequest = async (request) => {
 export const updateItem = (id, data) =>
   handleApiRequest(api.put(`/items/${id}`, data));
 export const createItem = (data) => {
-  console.log(data);
   handleApiRequest(api.post("/items", data));
 };
 export const getItemById = (id) => handleApiRequest(api.get(`/items/${id}`));
