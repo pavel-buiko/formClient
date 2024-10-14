@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://formserver.fly.dev/",
+  baseURL: "http://localhost:5000", //http://localhost:5000 //https://formserver.fly.dev/
 });
 
 const handleApiRequest = async (request) => {
@@ -15,7 +15,7 @@ const handleApiRequest = async (request) => {
 };
 
 export const updateItem = (id, data) =>
-  handleApiRequest(api.put(`/items/${id}`, data));
+  handleApiRequest(api.patch(`/items/${id}`, data));
 export const createItem = (data) => {
   handleApiRequest(api.post("/items", data));
 };

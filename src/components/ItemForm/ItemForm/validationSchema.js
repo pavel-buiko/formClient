@@ -15,7 +15,7 @@ export const schema = yup.object().shape({
     .string()
     .oneOf(["yes", "no"], "Please select an option")
     .required("Please select an option"),
-  service: yup.string().notRequired("You must specify service"),
+  service: yup.string().notRequired(),
   comment: yup.string().notRequired(),
   microtasks: yup.array().of(
     yup.object({
